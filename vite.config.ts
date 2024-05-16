@@ -22,8 +22,8 @@ export default defineConfig({
         host: "0.0.0.0",
         port: 5173,
     },
-    build: {outDir: "build"},
-
+    build: {outDir: "docs"},
+    base: '/ChessNowBot',
     optimizeDeps: {
         esbuildOptions: {
             // Node.js global to browser globalThis
