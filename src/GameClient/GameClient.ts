@@ -83,6 +83,8 @@ export class GameClient extends TypedEventEmitter<GameClientEvents> {
             },
             transports: ["polling", "websocket"],
         });
+	console.log(this.socket)
+
         this.chess = new Chess();
 
         this._state = {
