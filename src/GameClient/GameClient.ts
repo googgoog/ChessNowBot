@@ -104,6 +104,8 @@ export class GameClient extends TypedEventEmitter<GameClientEvents> {
         this.socket.on("gameEnd", this.handleGameEnd);
         this.socket.on("move", this.handleMove);
         this.socket.on("disconnect", this.handleDisconnect);
+
+        window.Telegram.WebApp.expand();
     }
 
     get state(): ClientState {
