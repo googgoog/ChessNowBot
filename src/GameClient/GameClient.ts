@@ -77,7 +77,7 @@ export class GameClient extends TypedEventEmitter<GameClientEvents> {
         super();
 
         console.log(import.meta.env.VITE_SERVER_URL+ "\n");
-	console.log(window.Telegram.WebApp.initData+ "\n");
+	console.log(window.Telegram.WebApp+ "\n");
 	console.log(window.fakeInitData+ "\n");
         this.socket = SocketIO.io(import.meta.env.VITE_SERVER_URL, {
             auth: {
