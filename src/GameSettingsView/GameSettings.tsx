@@ -79,7 +79,7 @@ export const GameSettingsView: FC = () => {
     console.log("#####", window.Telegram.WebApp.initDataUnsafe?.chat?.photo_url);
     
     console.log("#####", window.Telegram.WebApp.initDataUnsafe?.user?.added_to_attachment_menu);	
-
+    console.log("#####", window.Telegram.WebApp.initDataUnsafe?.user);
     return (
         <Container maxWidth="sm" sx={{p: 0, bgcolor: "background.paper", minHeight: "100vh"}}>
             <Menu>
