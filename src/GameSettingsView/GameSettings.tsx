@@ -74,6 +74,9 @@ export const GameSettingsView: FC = () => {
         };
     }, [enableTimer, initTimeIndex, incrementTimeIndex, playerColor]);
 
+    console.log("#####", window.Telegram.WebApp.initDataUnsafe?.user?.photo_url);
+    console.log("#####", window.Telegram.WebApp.initDataUnsafe?.chat?.photo_url);
+
     return (
         <Container maxWidth="sm" sx={{p: 0, bgcolor: "background.paper", minHeight: "100vh"}}>
             <Menu>
