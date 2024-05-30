@@ -74,6 +74,7 @@ export const GameSettingsView: FC = () => {
         };
     }, [enableTimer, initTimeIndex, incrementTimeIndex, playerColor]);
 
+    console.log("@@@@@", window.Telegram.WebApp.initDataUnsafe);
     console.log("#####", window.Telegram.WebApp.initDataUnsafe?.user?.photo_url);
     console.log("#####", window.Telegram.WebApp.initDataUnsafe?.chat?.photo_url);
 
