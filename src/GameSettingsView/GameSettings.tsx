@@ -120,7 +120,7 @@ export const GameSettingsView: FC = () => {
                     <ColorPicker value={playerColor} onChange={setPlayerColor} />
                 </MenuItem>
             </Menu>
-            <Button onClick={window.Telegram.WebApp.switchInlineQuery.bind(null, "invite")}>invite friends</Button>
+            <Button onClick={window.Telegram.WebApp.switchInlineQuery.bind(null, "invite", ["users", "channels", "groups"])}>invite friends</Button>
         </Container>
     );
 };
