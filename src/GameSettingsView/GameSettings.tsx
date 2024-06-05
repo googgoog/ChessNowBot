@@ -1,6 +1,6 @@
 import SwapVertOutlinedIcon from "@mui/icons-material/SwapVertOutlined";
 import TimerOutlinedIcon from "@mui/icons-material/TimerOutlined";
-import {Collapse, Container} from "@mui/material";
+import {Button, Collapse, Container} from "@mui/material";
 import {FC, useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
 
@@ -74,12 +74,9 @@ export const GameSettingsView: FC = () => {
         };
     }, [enableTimer, initTimeIndex, incrementTimeIndex, playerColor]);
 
-    console.log("@@@@@", window.Telegram.WebApp.initDataUnsafe);
     console.log("#####", window.Telegram.WebApp.initDataUnsafe?.user?.photo_url);
     console.log("#####", window.Telegram.WebApp.initDataUnsafe?.chat?.photo_url);
-    
-    console.log("#####", window.Telegram.WebApp.initDataUnsafe?.user?.added_to_attachment_menu);	
-    console.log("#####", window.Telegram.WebApp.initDataUnsafe?.user);
+
     return (
         <Container maxWidth="sm" sx={{p: 0, bgcolor: "background.paper", minHeight: "100vh"}}>
             <Menu>
@@ -123,6 +120,7 @@ export const GameSettingsView: FC = () => {
                     <ColorPicker value={playerColor} onChange={setPlayerColor} />
                 </MenuItem>
             </Menu>
+            <Button onClick={window.Telegram.WebApp.switchInlineQuery.bind(null, "invite")}>invite friends</Button>
         </Container>
     );
 };
